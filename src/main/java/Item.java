@@ -9,15 +9,24 @@ public class Item {
 
     @Override
     public String toString(){
+
         //Sets status of listing
         //If / Else statements to check if list is complete or not
-        return null;
+
+        String isComplete;
+        if(getComplete().equals(true)) {
+            isComplete = "completed";
+        } else {
+            isComplete = "incomplete";
+        }
+
+        return (this.getDate() + "\t" + this.getDescription() + " - " + isComplete);
     }
 
 
     public void setDescription(String description) {
         //Sets description for : string
-        this.description = null;
+        this.description = description;
     }
     public LocalDate getDate() {
         return date;
@@ -40,9 +49,18 @@ public class Item {
     //setter for complete status of listing
 
     public String getCompletedBoolean(Boolean complete) {
+
         //checks status of complete variable
         // returns value as string
-        return null;
+
+        String temp;
+        if(getComplete().equals(true)) {
+            temp = "completed";
+        } else {
+            temp = "incomplete";
+        }
+
+        return temp;
     }
 
     //variables for item : listing in to do list
@@ -52,14 +70,14 @@ public class Item {
 
     //constructor for item : listing in to do list
     public Item(String description, LocalDate date, Boolean complete) {
-        this.description = null;
-        this.date = null;
-        this.complete = null;
+        this.description = description;
+        this.date = date;
+        this.complete = complete;
     }
 
 
     public String getDescription() {
-        return null;
+        return description;
     }
     //getter for description of listing
 }
