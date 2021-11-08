@@ -4,6 +4,8 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.0.9'
 }
 
+mainClassName = 'Application'
+
 group 'org.example'
 version '1.0-SNAPSHOT'
 
@@ -33,5 +35,3 @@ application {
 run {
     standardInput = System.in
 }
-
-mainClassName = 'Application'
